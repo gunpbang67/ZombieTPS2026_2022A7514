@@ -34,7 +34,7 @@ public class ZombieSpawner : MonoBehaviour
         UpdateUI();
 
         float targetWeight = Mathf.Clamp01((float)wave / fullNightWave);
-        if (nightVolume != null) nightVolume.weight = Mathf.MoveTowards(nightVolume.weight, targetWeight, moodBlendSpeed * Time.time);
+        if (nightVolume != null) nightVolume.weight = Mathf.MoveTowards(nightVolume.weight, targetWeight, moodBlendSpeed * Time.deltatime);
     }
 
     private void UpdateUI()
