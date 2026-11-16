@@ -36,8 +36,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // 11주차 : 플레이어가 접속 후에 생성되므로 시작 시점엔 찾을 수 없다.
+        // 협동 게임오버 규칙은 14주차에 PlayerSpawner 에서 다시 연결한다.
         // 플레이어 캐릭터의 사망 이벤트 발생시 게임 오버
-        FindFirstObjectByType<PlayerHealth>().onDeath += EndGame;
+        // FindFirstObjectByType<PlayerHealth>().onDeath += EndGame;
     }
 
     // 점수를 추가하고 UI 갱신
